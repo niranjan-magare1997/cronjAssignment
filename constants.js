@@ -1,9 +1,9 @@
 module.exports = {
     _PRIVATE_KEY: process.env.jwtPrivateKey ? process.env.jwtPrivateKey : 'userApp',
-    _HOST: 'localhost',
-    _PORT: 3000,
-    _USERNAME: 'root',
-    _PSWD: 'niranjan',
+    _HOST: process.env._host ? process.env._host : 'localhost',
+    _PORT: process.env._port ? process.env._host : 3000,
+    _USERNAME: process.env._username ? process.env._username : 'root',
+    _PSWD: process.env._password ? process.env._password : '1234',
     _DB_NAME: 'userDemoApp',
     _TABLES: [
         `CREATE TABLE IF NOT EXISTS roles (id int NOT NULL AUTO_INCREMENT, roleId int NOT NULL, description varchar(255) NOT NULL, PRIMARY KEY (id));`,
